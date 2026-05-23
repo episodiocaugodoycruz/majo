@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cafetería Aroma</title><!-- titulo de la pagina-->
+<!-- empiezan los css-->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #661d1d;
+      color: #000000;
+    }
+
+    header {
+      background-color: #9b3636;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding:1px;
+    }
+
+    .bienvenida {
+      text-align: center;
+      padding: 15px 20px;
+      background-color: #882222;
+    }
+
+    .productos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 20px;
+      flex-wrap: wrap;
+    }
+
+    .producto {
+      background-color: rgb(190, 84, 84);
+      border: 1px solid #000000;
+      border-radius: 60px;
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 15px 5px rgba(224, 54, 54, 0.438);
+    }
+
+    .producto h3 {
+      color: #5c0505;
+    }
+
+    footer {
+      background-color: rgb(88, 19, 19);
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+  <!-- terminan los css-->
+</head>
+<body><!-- empieza el body-->
+
+  <header><!-- empieza el header-->
+    <h1>Cafetería Aroma</h1>
+  </header><!-- termina el header-->
+
+  <section class="bienvenida"><!-- seccion de bienvenida de clientes-->
+    <h2>Bienvenido</h2>
+    <p>Disfruta del mejor café y deliciosos postres en un ambiente acogedor.</p>
+  </section><!-- termina la seccion bienvenida-->
+
+  <section class="productos"><!-- empieza la lista de productos-->
+    
+    <div class="producto">
+      <h3>Café Espresso</h3>
+      <p>Intenso y aromático, perfecto para empezar el día.</p>
+    </div>
+
+    <div class="producto">
+      <h3>Cappuccino</h3>
+      <p>Suave mezcla de café, leche y espuma cremosa.</p>
+    </div>
+
+    <div class="producto">
+      <h3>Café en Grano</h3>
+      <p>Perfecto para consumir en la comodidad de tu casa.</p>
+    </div>
+
+  </section><!-- termina la seccion de productos-->
+
+  <footer><!-- empieza el footer-->
+    <p>© 2026 Cafetería Aroma</p>
+  </footer><!-- termina el footer-->
+
+</body><!-- termina el body-->
+</html>
