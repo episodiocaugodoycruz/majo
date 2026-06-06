@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conectados - Gestión de Estudiantes</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --primario:#092e20;
+    --secundario:#1565c0;
+    --fondo:#f5f4f0;
+    --texto:#1c1c1c;
+    --borde:#e0ddd6;
+    --error:#ef4444;
+    --exito:#10b981;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'DM Sans',sans-serif;
+    background:var(--fondo);
+    color:var(--texto);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+
+header{
+    background:var(--primario);
+    color:white;
+    padding:16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:50px;
+    height:50px;
+    object-fit:contain;
+}
+
+.logo-area h1{
+    font-size:1.2rem;
+}
+
+.usuario{
+    font-size:.9rem;
+}
+
+/* NAV */
+
+nav{
+    background:white;
+    border-bottom:1px solid var(--borde);
+    padding:12px 16px;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--primario);
+    font-weight:600;
+}
+
+/* MAIN */
+
+main{
+    flex:1;
+    padding:16px;
+}
+
+.contenedor{
+    display:grid;
+    gap:24px;
+}
+
+/* PERFIL */
+
+.card{
+    background:white;
+    border:1px solid var(--borde);
+    border-radius:12px;
+    padding:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:var(--primario);
+}
+
+.datos{
+    display:grid;
+    gap:10px;
+}
+
+/* FORM */
+
+.formulario{
+    display:grid;
+    gap:15px;
+}
+
+.campo{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    margin-bottom:5px;
+    font-weight:500;
+}
+
+input{
+    padding:12px;
+    border:1px solid var(--borde);
+    border-radius:8px;
+    font-family:inherit;
+}
+
+.botones{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+button{
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.guardar{
+    background:var(--exito);
+    color:white;
+}
+
+.editar{
+    background:var(--secundario);
+    color:white;
+}
+
+.eliminar{
+    background:var(--error);
+    color:white;
+}
+
+/* TABLA */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+th{
+    background:var(--primario);
+    color:white;
+}
+
+th,td{
+    padding:12px;
+    border:1px solid var(--borde);
+    text-align:left;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--primario);
+    color:white;
+    text-align:center;
+    padding:16px;
+}
+
+/* DESKTOP */
+
+@media(min-width:768px){
+
+    header{
+        padding:20px 32px;
+    }
+
+    nav{
+        padding:16px 32px;
+    }
+
+    main{
+        padding:32px;
+    }
+
+    .contenedor{
+        grid-template-columns:1fr 2fr;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+    <div class="logo-area">
+        <!-- Reemplazar por tu logo -->
+        <img src="logo.png" alt="Logo Conectados" class="logo">
+
+        <h1>Conectados por Mendoza Futura</h1>
+    </div>
+
+    <div class="usuario">
+        Administrador
+    </div>
+
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Estudiantes</a></li>
+        <li><a href="#">Facilitadores</a></li>
+        <li><a href="#">Cursos</a></li>
+        <li><a href="#">Asistencias</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<div class="contenedor">
+
+    <!-- PERFIL -->
+
+    <section class="card">
+
+        <h2>Información del Estudiante</h2>
+
+        <div class="datos">
+            <p><strong>ID:</strong> 001</p>
+            <p><strong>Nombre:</strong> Juan</p>
+            <p><strong>Apellido:</strong> Pérez</p>
+            <p><strong>DNI:</strong> 40123456</p>
+            <p><strong>Email:</strong> juan@gmail.com</p>
+            <p><strong>Usuario:</strong> juanp</p>
+            <p><strong>Curso:</strong> Programación Web</p>
+        </div>
+
+    </section>
+
+    <!-- FORMULARIO -->
+
+    <section class="card">
+
+        <h2>Editar Estudiante</h2>
+
+        <form class="formulario">
+
+            <div class="campo">
+                <label>Nombre</label>
+                <input type="text">
+            </div>
+
+            <div class="campo">
+                <label>Apellido</label>
+                <input type="text">
+            </div>
+
+            <div class="campo">
+                <label>DNI</label>
+                <input type="text">
+            </div>
+
+            <div class="campo">
+                <label>Email</label>
+                <input type="email">
+            </div>
+
+            <div class="campo">
+                <label>Usuario</label>
+                <input type="text">
+            </div>
+
+            <div class="campo">
+                <label>Contraseña</label>
+                <input type="password">
+            </div>
+
+            <div class="campo">
+                <label>Curso</label>
+                <input type="text">
+            </div>
+
+            <div class="botones">
+                <button class="guardar">Guardar</button>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+        </form>
+
+    </section>
+
+</div>
+
+<br><br>
+
+<section class="card">
+
+    <h2>Listado de Estudiantes</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Email</th>
+                <th>Curso</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Juan</td>
+                <td>Pérez</td>
+                <td>40123456</td>
+                <td>juan@gmail.com</td>
+                <td>Programación Web</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 Conectados por Mendoza Futura
+</footer>
+
+</body>
